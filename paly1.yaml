@@ -1,0 +1,13 @@
+---
+- name: install apache2
+  hosts: slave2
+  become: true
+  tasks:
+  - name: sc1.sh
+    script: sc1.sh 
+- name: install nginx
+  hosts: slave3 
+  become: true
+  tasks:
+  - name: sc2.sh
+    script: sc21.sh 
